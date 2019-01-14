@@ -19,6 +19,7 @@ public class DeleteFile {
         if (files != null) {
             for (File file : files) {
                 String filename = file.getName();
+                // 字符串的比较，不能使用 ==
 //                if(filename == GIT || filename == IDE){
                 if (filename.equals(GIT) || filename.equals(IDE)) {
                     System.out.println("不处理 " + filename);
