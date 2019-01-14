@@ -19,10 +19,12 @@ public class DeleteFile {
         if (files != null) {
             for (File file : files) {
                 String filename = file.getName();
-                if(filename == GIT || filename == IDE){
+//                if(filename == GIT || filename == IDE){
+                if (filename.equals(GIT) || filename.equals(IDE)) {
                     System.out.println("不处理 " + filename);
                     continue;
                 }
+
                 if (file.isDirectory()) {
                     deleteFolder(file);
                 } else {
